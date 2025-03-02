@@ -1,0 +1,22 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+struct Ticket {
+    int id;
+    string descriere;
+    bool rezolvat;
+};
+
+vector<Ticket> bilete;
+
+void adauga_bilet(string descriere) {
+    Ticket nou = { (int)bilete.size() + 1, descriere, false };
+    bilete.push_back(nou);
+    cout << "Bilet adăugat cu ID: " << nou.id << "\n";
+}
+
+int main() {
+    adauga_bilet("Problema cu rețeaua");
+    return 0;
+}
